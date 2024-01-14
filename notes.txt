@@ -10,4 +10,4 @@ during verification we have to decode the id from the tooken generated
 generate: id se token 
 verify : token se id 
 
-
+git remote add origin https://github.com/Guptasrijal0901/Authentication.git
