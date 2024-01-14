@@ -1,0 +1,13 @@
+middleware se hm cookies ko baar baar nhi likhna padega 
+middleware ek function h jo req or res k beech mai chalta hai 
+middleware contains 3 argument i.e. req , res , next 
+next is responsible for further codes to run and give response to frontend 
+koi aisa function hai jisse haar api mai chalana hai toh use (req,  res) k phele laga dena toh vo function haar api mai chalega 
+next ka use karenge aage k code ko chalne k liye response mai 
+tooken is part of cookie 
+payload is the details of the user from the cookie is generated while verifying we can decode the details of the user who generat the cookie 
+during verification we have to decode the id from the tooken generated 
+generate: id se token 
+verify : token se id 
+
+

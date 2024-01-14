@@ -1,0 +1,16 @@
+SIR NOTES
+Cookies are small files of information (encrypted long string of token) that a web server(backend)
+generates (while logging) and sends to a web browser (frontend).
+Web browsers store the cookies they receive for a predetermined period of time,
+or for the length of a user's session on a website.
+They attach the relevant cookies to any future requests the user makes of the web server.
+
+Cookies are help in authenticating whether the user is logged in or not
+Cookies not only authenticate the user but also stores the details about the current user
+because using these details from the cookies, the backend server send the respective data.
+
+A middleware is a function which runs in between the request and response cycle.
+This middleware function contains three arguments
+which are request and response objects, along with next argument
+Next argument is responsible for further processing of response
+operation
