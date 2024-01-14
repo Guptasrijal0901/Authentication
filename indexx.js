@@ -106,7 +106,6 @@ app.post("/gen/login" , (req, res)=>{
         res.status(400).json({ success : false , message: error.message})
     }
 })
-
 app.get("/ver/token" , (req , res, next)=>{
     if (verifyToken(req.cookies.gen_tk)) {
         const userid = verifyToken(req.cookies.gen_tk);
