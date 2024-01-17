@@ -15,20 +15,19 @@ const LOGGEDin = (req, res , next)=>{
     }
     next();
 }
-
 const PRO = (req, res , next)=>{
-    console.log("This tab belongs for PRO users only ");
-    if (req.cookies.auth_tk && req.cookies.pro_tk){
+    // console.log("This tab belongs for PRO users only ");
+    res.cookie("pro_tk" , "srijalgupta0901pro" )
+    if (req.cookies.pro_tk){
         return res.json({ success: true , message : "This is only for PRO users"})
     }else{
         return res.json ({ success: false , message : "You are not PRO user "})
     }
     next();
 }
-
 const ULTRAPRO = (req , res, next)=>{
-    console.log("This tab belongs for ULTAPRO user only");
-    if (req.cookies.ultra_tk && req.cookies.auth_tk && req.cookies.pro_tk) {
+    res.cookie("ultra_tk" , "srijalgupta0901ultrapro" )
+    if (req.cookies.ultra_tk) {
         return res.json ({ success : true , message : "This is for only ULTRAPRO users "})
     } else {
         return res.json ({ success: false , message : "You are not ULTAPRO user "}) 
@@ -83,18 +82,18 @@ app.get("/profile", (req , res , next)=>{
     }
     next();
 })
-
 app.get ("/friends" , PRO ,(req, res , next)=>{
-    res.cookie("pro_tk" , "srijalgupta0901pro" )
+    // res.cookie("pro_tk" , "srijalgupta0901pro" )
     try {
-        return res.json({ success: true , message : "Hello PROcookie is generated"})
+        return res.json({ success: true , message : "Hello PROcookie is generated"});
     } catch (error) {
         return res.status(400).json({success: false , error: error.message});
     }
     next();
 })
 app.get ("/chats" ,  ULTRAPRO , (req, res , next)=>{
-    res.cookie("ultra_tk" , "srijalgupta0901ultrapro" )
+    // res.cookie("ultra_tk" , "srijalgupta0901ultrapro" )
+    // console.log("This tab belongs for ULTAPRO user only");
     try {
         return res.json({ success: true , message : "Hello ULTAPROcookie is generated"})
     } catch (error) {
