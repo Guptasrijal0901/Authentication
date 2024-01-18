@@ -12,3 +12,8 @@ verify : token se id
 
 git remote add origin https://github.com/Guptasrijal0901/Authentication.git
 
+create connection file 
+db
+backend to frontend : get
+frontend to backend : post
+same email se 2 register ho toh findone se check karet hai 
